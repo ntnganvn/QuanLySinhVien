@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+}
+/*phan header*/
+.header {
+    background-color:#f1f1f1;
+    padding:20px;
+    text-align: center;
+}
+/* thanh menu*/
+.topnav {
+    overflow:hidden;
+    background-color:#F4A460;
+    }
+.topnav  a{
+    display:block;
+    color: black;
+    text-align:center;
+    padding: 10px 40px;
+    text-decoration:none;
+    float:right;
+    
+}
+.topnav  a:hover{
+    background-color:white;
+    color:black;
+}
+
+div.sticky{
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    padding:0;
+}
+
+/* media*/
+@media screen and (max-width:450px) {
+    .topnav a{
+        padding:14px 5%;
+    }
+}
+/*content*/
+.content {
+    padding: 20px;
+    width:100%;
+    background-image: url("bg.gif");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.content .tracuu {
+    width:80%;
+    box-sizing: border-box;
+    height:250px;
+    margin-top:30px;
+
+}
+.content .danhsach {
+    resize: horizontal;
+    overflow:auto;
+    width:100%;
+    margin-top: 30px;
+    box-sizing: border-box;
+    height:400px;
+    margin-bottom:20px;
+}
+/*scroll*/
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content .danhsach::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.content .danhsach{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+/*tra cuu thong tin*/
+form {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 10px auto 0;
+    box-shadow: 15px 15px 40px 15px rgba(0, 0, 0, 0.2);
+    padding-bottom: 40px;
+    border-radius: 3px;
+    background-color:white;
+}
+.column     input[type=text] {
+    width: 80%;
+    padding: 7px 20px;
+    margin: 0px 0px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.column {
+    float: left;
+    width:50%;
+    padding:0
+}
+.row :after {
+content:"";
+display: table;
+clear:both;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 20px;
+    margin-left:20px;
+    color:black;
+    padding-left:10px
+}
+
+.col-75 {
+    float: left;
+    margin-top: 20px;
+    width:65%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* search*/
+.column1 button{
+    border-radius:20px;
+    background:#40E0D0;
+    border: none;
+    cursor: pointer;
+    padding:7px 10px;
+    width: 100px;
+    color: black;
+    margin-top:30px;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    float:right;
+    margin-right: 100px;
+    
+    }
+.column1 button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    border:none;
+    border-radius:20px;
+    }
+
+
+/*table*/
+table, td, th {
+    border: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+    width: 97%;
+    background:#fff;
+    position: relative;
+    margin-left: 20px;
+} 
+td, th{
+    height: 35px;
+    vertical-align: bottom;
+    padding:10px 20px;
+}
+th {
+    background-color:#1abc9c;
+    color: white;
+    text-align:center;
+    position: sticky;
+    top:0;
+    position:-webkit-sticky;/* Safari */
+}
+tr:hover {background-color:Silver;
+}
+table a{
+    text-decoration:None;
+}
+/*button add*/
+.button{
+    float:right;
+    text-align:center;
+    margin-top:0px;
+    margin-right:70px;
+    margin-bottom: 20px;
+}
+.button a{
+    text-decoration:None;
+}
+
+/*footer*/
+
+
+@media screen and (max-width:760px) {
+    .column{
+        width:100%;
+    }
+    .content .tracuu {
+        height:350px;
+    }
+    .column1 button{
+        margin-top:20px;
+    }
+}
+@media screen and (max-width:410px){
+    .content .tracuu {
+        height:400px;
+    }
+}
+/* LOADER */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border: 10px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    }
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Add "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+    display: none;
+    text-align: center;
+}
